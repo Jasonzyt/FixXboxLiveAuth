@@ -7,4 +7,6 @@ Add the following line to server.properties
 trusted-key=MHYwEAYHKoZIzj0CAQYFK4EEACIDYgAECRXueJeTDqNRRgJi/vlRufByu/2G0i2Ebt6YMar5QX/R0DIIyrJMcUpruK4QveTfJSTp3Shlq4Gk34cD/4GUWwkv0DVuzeuB+tXija7HBxii03NHDbPAD0AKnLr2wdAp
 ```
 
-But this will occupy the only trusted-key and the softwares such as [FakePlayer](https://github.com/ddf8196/FakePlayer) won't be able to work
+But this will occupy the only trusted-key and the softwares such as [FakePlayer](https://github.com/ddf8196/FakePlayer) won't be able to work.
+
+What's more, this way is only for server-side. You must use [KeyPatcher](https://github.com/ambiennt/KeyPatcher) to patch client.
