@@ -1,0 +1,41 @@
+set_arch("x64")
+set_plat("windows")
+set_toolchains("msvc")
+
+target("FixXboxLiveAuth")
+    set_rules("mode.release")
+    set_kind("shared")
+    add_files("src/*.cpp")
+    add_includedirs("include")
+    add_defines(
+        "UNICODE",
+        "_UNICODE",
+        "NDEBUG",
+        "WIN32_LEAN_AND_MEAN",
+        "_CRT_SECURE_NO_WARNINGS",
+        "_WINDOWS",
+        "_USRDLL",
+        "_AMD64_",
+        "NOMINMAX"
+    )
+    set_warnings("all")
+    set_optimize("fastest")
+    set_languages("c17", "cxx20")
+    set_runtimes("MD")
+    add_linkdirs(
+        "lib"
+    )
+    add_links(
+        "Chakra",
+        "LiteLoader"
+    )
+    add_cxflags(
+        "/utf-8",
+        "/EHsc",
+        "/permissive-",
+        "/sdl",
+        "/Zc:inline",
+        "/Zi",
+        "/FS"
+    )
+    add_shflags("/LTCG")
